@@ -98,7 +98,15 @@ if ($num_rows > 0) {
         $output['data'] .= '<td>' . $row['fechaNacimiento'] . '</td>';
         $output['data'] .= '<td>' . $row['rfc'] . '</td>';
         $output['data'] .= '<td>' . $row['fechaIngreso'] . '</td>';
-        $output['data'] .= '<td>' . $row['genero'] . '</td>';
+        $genero = "";
+        if($row['genero'] == "1"){
+            $genero = "Masculino";
+        }elseif($row['genero'] == "2"){
+            $genero = "Femenino";
+        }else{
+            $genero = "Sin Especificar";
+        }
+        $output['data'] .= '<td>' . $genero . '</td>';
         $output['data'] .= '<td>' . $row['domicilio'] . '</td>';
         $output['data'] .= '<td>' . $row['telefono'] . '</td>';
         $output['data'] .= '<td><img class="imagen" src="/SistemaCrud/imagenes/' . $row['fotografia'] . '"></td>';
