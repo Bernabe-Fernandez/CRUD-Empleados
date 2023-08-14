@@ -1,0 +1,440 @@
+/***** Custom Properties******/
+:root {
+    --first-color: #bd0707;
+    --first-alpha-color: rgb(189, 7, 7, 0.65);
+    --green-color: #05610a;
+    --green-alpha-color: rgb(5, 97, 10, 0.50);
+    --orange-color: #f59300;
+    --second-color: rgb(0, 51, 90);
+    --second-color-alpha: rgba(0, 51, 90, 0.75);
+    --gray-color: #333;
+    --white-color: #fff;
+    --black-color: #000;
+    --link-color: #509ee3;
+    --title-color: #333;
+    --text-color: #222;
+    --font: "Krub", sans-serif;
+    --max-width: 120rem;
+}
+
+/***** Espacio de Reseteo *****/
+/*** Codigo para el box model***/
+html {
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: 15px;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    overflow-x: hidden;
+    /*Oculta el scroll cuando se desvorda un contenido */
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/***Configuramos los titulos ***/
+h1 {
+    font-size: 3.5rem;
+    padding: 0;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+/***** Botones ********/
+.boton-azul {
+  background-color: var(--second-color);
+  color: var(--white-color);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin: 2rem;
+  display: inline-block;
+  border: none;
+  width: 30%;
+}
+/*** Boton azul hover***/
+.boton-azul:hover {
+  cursor: pointer;
+  background-color: var(--link-color);
+  color: var(--black-color);
+}
+/*** Boton azul a la izquierda ***/
+.boton-azul-rigth {
+  text-align: right;
+}
+
+/****** boton para inicio de sesion *******/
+.input-login{
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+
+.boton-login{
+  width: 50%;
+  padding: 10px 16px;
+  border-radius: 5px;
+  outline: none;  
+  background-color: var(--first-color);
+  color: var(--white-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  margin-top: 20px;
+  transition: background-color .3s ease-in-out;
+  text-decoration: none;
+
+  
+}
+.boton-login:hover{
+  cursor: pointer;
+  background-color: var(--first-alpha-color);
+  color: var(--black-color);
+}
+
+/***** boton verde *******/
+.boton-verde {
+  background-color: var(--green-color);
+  color: var(--white-color);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 2rem;
+  display: inline-block;
+  border: none;
+  width: 30%;
+  pointer-events: auto;
+}
+
+/*** Boton verde hover***/
+.boton-verde:hover {
+  cursor: pointer;
+  background-color: var(--green-alpha-color);
+  color: var(--black-color);
+}
+/*** centrar boton verde***/
+.boton-verde-center {
+  text-align: center;
+}
+
+/***** estilos del titulo *******/
+.head{
+    background-color: var(--white-color);
+    width: 100%;
+    height: 10rem;
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/******* boton editar *******/
+.boton-editar-block{
+  background-color: var(--second-color);
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 0.5rem;
+  text-align: center;
+  margin: 1rem;
+  display: inline-block;
+  border: none;
+  width: 80%;
+}
+
+.boton-editar-block:hover {
+  cursor: pointer;
+  background-color: var(--second-color-alpha);
+  color: var(--title-color);
+}
+
+/******* boton eliminar ******/
+.boton-eliminar-block{
+  background-color: var(--first-color);
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 0.5rem;
+  text-align: center;
+  margin: 1rem;
+  display: block;
+  border: none;
+  width: 80%;
+}
+
+.boton-eliminar-block:hover {
+  color: var(--black-color);
+}
+
+.head h1{
+    margin: 0;
+    color: var(--first-color);    
+    font-size: 3.5rem;
+}
+
+/*** Barra Menu ****/
+.menu {
+    padding: 2rem;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--first-color);
+  }
+
+  .container-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bar-nav {
+    position: static;
+    background-color: var(--first-color);
+    opacity: 1;
+    pointer-events: auto;
+    width: auto;
+  }
+
+  .bar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  .menu--link {
+    display: block;
+    padding: 0.65rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white-color);
+  }
+  .menu--link:hover {
+    background-color: var(--first-color);
+    color: var(--black-color);
+    width: 100%;
+  }
+
+  /*** alertas ***/
+.alerta {
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--white-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+.error {
+  background-color: var(--first-color);
+}
+.exito {
+  background-color: var(--green-color);
+}
+.orange{
+  background-color: var(--orange-color);
+}
+  /****** cuerpo del proyecto *****/
+
+  /***** Tabla de empleados *****/
+.contenedor-tabla{
+  width: 90%;
+  margin-left: 5%;
+  max-height: 500px;
+  overflow: auto;
+  position: sticky;
+}
+table.empleados{
+    margin: 0 auto;
+    width: 90%;
+    border-spacing: 0;
+}
+
+table.empleados thead {
+    background-color: var(--second-color);
+  }
+  
+  table.empleados thead th {
+    color: var(--white-color);
+    padding: 1rem;
+  }
+  
+  table.empleados .imagen-tabla {
+    width: 10rem;
+  }
+  
+  .imagen {
+    width: 15rem;
+  }
+
+/**** Formulario ****/
+.contenedor-formulario{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario {
+  width: 60%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.formulario legend {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+.formulario fieldset{
+  width: auto;
+}
+
+.formulario label {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+}
+
+/**** aqui usamos estilos css para los inputs que no sean de tipo submit***/
+.formulario input:not([type="submit"]),
+.formulario select{
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  border: 1px solid var(--black-color);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formulario p {
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+/******* Login ********/
+.imagenLogin{
+  background-position: center center;
+  background-size: cover;
+  height: 30rem;
+  flex: 0 0 calc(40%);
+  position: relative;
+  }
+
+  .password-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .toggle-password {
+    position: absolute;
+    right: 0;
+    padding-bottom: 1.4rem;
+    border: none;
+    background-color: transparent;
+    color: var(--first-color);
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+
+/******* buscador ********/
+.form-content{
+  width: 90%;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  margin: 2rem 3rem;
+}
+
+.buscador{
+  margin-left: 2rem;
+  width: auto;
+}
+.buscador .input-buscador{
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--gray-color);
+  background-color: var(--white-color);
+  background-clip: padding-box;
+  border: 1px solid var(--black-color);
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.input-select{
+  display: block;
+  text-align: center;
+  width: 60%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  margin-left: 4rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--gray-color);
+  background-color: var(--white-color);
+  background-clip: padding-box;
+  border: 1px solid var(--black-color);
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.num-registros{
+  text-align: right;
+}
+
+/***** footer *****/
+footer {
+  background-color: var(--second-color);
+  width: 100%;
+  height: 6rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  width:45%;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--white-color);
+}
+
+footer span {
+  color: var(--first-color);
+}
